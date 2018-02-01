@@ -30,6 +30,9 @@
 "water_and_oil_data_sheet" = "Water and oil data table";
 "course" = "Use a tutorial";
 "music" = "Music";
+"close_music"="Close Music";
+"play_music"="Play Music";
+
 //<!--护肤完成弹出窗口-- = "
 "text1" = "Already completed";
 "text2" = "Rise of the color value";
@@ -60,6 +63,7 @@
 "oil_list" = "Water and oil meter";
 "suggestion" = "Suggestion feedback";
 "pull" = "Massage and tyre";
+"more" = "More";
 
 //<!--登陆界面-- = "
 "password" = "password (6-10 digit or alphabet)";

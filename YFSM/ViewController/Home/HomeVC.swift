@@ -795,12 +795,12 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         if sds.isEqual("运行中") {
             playButton.isHidden = false;
             if swithdd == false {
-                playButton.setTitle("关闭音乐", for: UIControlState.normal)
+                playButton.setTitle(getLocalizableString(key: "close_music", common: "关闭音乐") , for: UIControlState.normal)
             } else {
-                playButton.setTitle("打开音乐", for: UIControlState.normal)
+                playButton.setTitle(getLocalizableString(key: "play_music", common: "打开音乐"), for: UIControlState.normal)
             }
         } else {
-            playButton.setTitle("关闭音乐", for: UIControlState.normal)
+            playButton.setTitle(getLocalizableString(key: "close_music", common: "关闭音乐"), for: UIControlState.normal)
             playButton.isHidden = true;
         }
         
@@ -814,12 +814,12 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             print("点击选择-------")
             switchOn = true;
             audioPlayer?.pause()
-            playButton.setTitle("打开音乐", for: UIControlState.normal)
+            playButton.setTitle(getLocalizableString(key: "play_music", common: "打开音乐") , for: UIControlState.normal)
         } else {
             print("点击未选择-------")
             switchOn = false;
             audioPlayer?.play()
-            playButton.setTitle("关闭音乐", for: UIControlState.normal)
+            playButton.setTitle(getLocalizableString(key: "close_music", common: "关闭音乐") , for: UIControlState.normal)
         }
         let userDefault = UserDefaults.standard
         userDefault.set(switchOn, forKey: "switchOn")
@@ -1041,7 +1041,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             self.performSegue(withIdentifier: "GoChartSegueIdentifier", sender: nil)
         }
         if indexPath.row == 2 {
-            NavigationManager.pushToNativeWebView(form: self, fileName: "operation", title: "更多" )
+            NavigationManager.pushToNativeWebView(form: self, fileName: "operation", title: getLocalizableString(key: "more", common: "更多") )
         }
         if indexPath.row == 3 {
             

@@ -30,6 +30,9 @@
 "water_and_oil_data_sheet"="水油数据表";
 "course"="使用教程";
 "music"="音乐";
+"close_music"="关闭音乐";
+"play_music"="打开音乐";
+
 //<!--护肤完成弹出窗口--="
 "text1"="已经完成";
 "text2"="颜值上升约";
@@ -60,6 +63,7 @@
 "teach"="使用教程";
 "oil_list"="水油表";
 "suggestion"="意见反馈";
+"more" = "更多";
 
 
 //<!--登陆界面--="

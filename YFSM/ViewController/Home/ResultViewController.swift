@@ -56,7 +56,10 @@ class ResultViewController: BaseVC {
         let tanInt:UInt32 = UInt32(tan)
         
         let sum:UInt32 = water + oi + jinInt + tanInt
-        resultContent.text = "颜值上升约"+"\(sum)";
+		
+		let str:String = getLocalizableString(key: "text2", common: "颜值上升约") + "\(sum)"
+        resultContent.text = str + getLocalizableString(key: "text3", common: "点")
+		
     }
 
     override func didReceiveMemoryWarning() {

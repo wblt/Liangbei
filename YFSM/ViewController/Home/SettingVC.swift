@@ -63,7 +63,7 @@ class SettingVC: BaseVC,UIAlertViewDelegate  {
             let alrtView = UIAlertView(title: "温馨提示", message: "是否确定退出？", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
             alrtView.show()
         } else if tag == 102 {
-            NavigationManager.pushToNativeWebView(form: self, fileName: "operation", title: "更多" )
+            NavigationManager.pushToNativeWebView(form: self, fileName: "operation", title: getLocalizableString(key: "more", common: "更多")  )
         } else if tag == 103 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let chatVC = storyboard.instantiateViewController(withIdentifier: "GoChartSegueIdentifier") as! ChartVC
