@@ -713,7 +713,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             let date = (Date.currentTime().substringToIndex(10)!.replacingOccurrences(of: "-", with: "") as NSString).integerValue
             
             let searchResultModel = ChartModel.searchSingle(withWhere: ["date":date], orderBy: nil) as! ChartModel
-            self.startLabel.text = "开始"
+            self.startLabel.text = getLocalizableString(key: "Start", common: "开始") 
             searchResultModel.oil2 = self.youfenValue
             searchResultModel.water2 = self.shuifenValue
             searchResultModel.date = date
@@ -780,7 +780,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             daojishiLabel.text = "\(fenzhong):"+bb
         }
         else{
-            self.startLabel.text = "开始"
+            self.startLabel.text = getLocalizableString(key: "Start", common: "开始") 
             daojishiLabel.isHidden = true
         
         }

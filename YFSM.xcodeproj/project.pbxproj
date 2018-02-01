@@ -80,7 +80,6 @@
 		362320FE200AFB8200E60794 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362320E6200AFB8200E60794 /* HomeVC.swift */; };
 		362320FF200AFB8200E60794 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362320E7200AFB8200E60794 /* ResultViewController.swift */; };
 		36232101200AFB8200E60794 /* SearchDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362320EA200AFB8200E60794 /* SearchDeviceView.swift */; };
-		36232102200AFB8200E60794 /* SearchDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362320EB200AFB8200E60794 /* SearchDeviceView.xib */; };
 		36232103200AFB8200E60794 /* LoginNavC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362320ED200AFB8200E60794 /* LoginNavC.swift */; };
 		36232104200AFB8200E60794 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362320EE200AFB8200E60794 /* LoginVC.swift */; };
 		36232105200AFB8200E60794 /* BubbleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 362320F1200AFB8200E60794 /* BubbleAnimation.m */; };
@@ -133,6 +132,7 @@
 		F8721C2B2022A722007EA8DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8721C2D2022A722007EA8DF /* Localizable.strings */; };
 		F8721C312022C854007EA8DF /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8721C332022C854007EA8DF /* SettingVC.xib */; };
 		F8721C382022CE80007EA8DF /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8721C3A2022CE80007EA8DF /* ResultViewController.xib */; };
+		F8721C442022EBF2007EA8DF /* SearchDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8721C462022EBF2007EA8DF /* SearchDeviceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,7 +244,6 @@
 		362320E6200AFB8200E60794 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		362320E7200AFB8200E60794 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		362320EA200AFB8200E60794 /* SearchDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDeviceView.swift; sourceTree = "<group>"; };
-		362320EB200AFB8200E60794 /* SearchDeviceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchDeviceView.xib; sourceTree = "<group>"; };
 		362320ED200AFB8200E60794 /* LoginNavC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavC.swift; sourceTree = "<group>"; };
 		362320EE200AFB8200E60794 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		362320F0200AFB8200E60794 /* BubbleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleAnimation.h; sourceTree = "<group>"; };
@@ -313,6 +312,9 @@
 		F8721C3D2022CEB9007EA8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ResultViewController.xib; sourceTree = "<group>"; };
 		F8721C412022CF1A007EA8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ResultViewController.strings; sourceTree = "<group>"; };
 		F8721C432022CF1D007EA8DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ResultViewController.strings"; sourceTree = "<group>"; };
+		F8721C452022EBF2007EA8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchDeviceView.xib; sourceTree = "<group>"; };
+		F8721C482022EBF5007EA8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchDeviceView.strings; sourceTree = "<group>"; };
+		F8721C4A2022EBF8007EA8DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SearchDeviceView.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -703,7 +705,7 @@
 			isa = PBXGroup;
 			children = (
 				362320EA200AFB8200E60794 /* SearchDeviceView.swift */,
-				362320EB200AFB8200E60794 /* SearchDeviceView.xib */,
+				F8721C462022EBF2007EA8DF /* SearchDeviceView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1011,7 +1013,7 @@
 				36232098200AFB2400E60794 /* klass.min.js in Resources */,
 				3623208A200AFB2400E60794 /* glyphicons-halflings-regular.ttf in Resources */,
 				36232084200AFB2400E60794 /* photoswipe-icons_402x.png in Resources */,
-				36232102200AFB8200E60794 /* SearchDeviceView.xib in Resources */,
+				F8721C442022EBF2007EA8DF /* SearchDeviceView.xib in Resources */,
 				F8721C252022A546007EA8DF /* InfoPlist.strings in Resources */,
 				36232022200AF9A500E60794 /* Assets.xcassets in Resources */,
 				3623208C200AFB2400E60794 /* glyphicons-halflings-regular.woff2 in Resources */,
@@ -1292,6 +1294,16 @@
 				F8721C432022CF1D007EA8DF /* zh-Hans */,
 			);
 			name = ResultViewController.xib;
+			sourceTree = "<group>";
+		};
+		F8721C462022EBF2007EA8DF /* SearchDeviceView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8721C452022EBF2007EA8DF /* Base */,
+				F8721C482022EBF5007EA8DF /* en */,
+				F8721C4A2022EBF8007EA8DF /* zh-Hans */,
+			);
+			name = SearchDeviceView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
