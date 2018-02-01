@@ -29,7 +29,9 @@ class ChartVC: BaseVC {
     }
     
     @objc func btnClickss(_ sender:AnyObject) {
-        chartView.refresh();
+       // chartView.refresh();
+		let waterOilListVC = WaterOilListVC();
+		self.navigationController?.pushViewController(waterOilListVC, animated: true);
     }
 
     func initEView(flag:String) {

@@ -20,6 +20,8 @@
 
 #import "FaceDataModel.h"
 
+#import "TimeDataModel.h"
+
 #import "MBProgressHUD+Hud.h"
 
 

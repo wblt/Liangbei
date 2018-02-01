@@ -133,6 +133,8 @@
 		F8721C312022C854007EA8DF /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8721C332022C854007EA8DF /* SettingVC.xib */; };
 		F8721C382022CE80007EA8DF /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8721C3A2022CE80007EA8DF /* ResultViewController.xib */; };
 		F8721C442022EBF2007EA8DF /* SearchDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8721C462022EBF2007EA8DF /* SearchDeviceView.xib */; };
+		F8721C4E202314B3007EA8DF /* WaterOilListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8721C4D202314B3007EA8DF /* WaterOilListVC.swift */; };
+		F8721C53202315EC007EA8DF /* TimeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8721C52202315EC007EA8DF /* TimeDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +317,9 @@
 		F8721C452022EBF2007EA8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchDeviceView.xib; sourceTree = "<group>"; };
 		F8721C482022EBF5007EA8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchDeviceView.strings; sourceTree = "<group>"; };
 		F8721C4A2022EBF8007EA8DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SearchDeviceView.strings"; sourceTree = "<group>"; };
+		F8721C4D202314B3007EA8DF /* WaterOilListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterOilListVC.swift; sourceTree = "<group>"; };
+		F8721C51202315EC007EA8DF /* TimeDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeDataModel.h; sourceTree = "<group>"; };
+		F8721C52202315EC007EA8DF /* TimeDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -641,6 +646,8 @@
 				36232196200E707800E60794 /* ChartModel.m */,
 				362321A32012526200E60794 /* FaceDataModel.h */,
 				362321A42012526200E60794 /* FaceDataModel.m */,
+				F8721C51202315EC007EA8DF /* TimeDataModel.h */,
+				F8721C52202315EC007EA8DF /* TimeDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -682,6 +689,7 @@
 			isa = PBXGroup;
 			children = (
 				362320E3200AFB8200E60794 /* ChartVC.swift */,
+				F8721C4D202314B3007EA8DF /* WaterOilListVC.swift */,
 				362320E4200AFB8200E60794 /* DateValueFormatter.swift */,
 			);
 			path = Chart;
@@ -1136,6 +1144,7 @@
 				36232138200AFBBA00E60794 /* DeviceManager.swift in Sources */,
 				3623212B200AFB9C00E60794 /* LogManager.swift in Sources */,
 				EE016B14200B53E200235DF7 /* GuideViewController.swift in Sources */,
+				F8721C4E202314B3007EA8DF /* WaterOilListVC.swift in Sources */,
 				362320C9200AFB4500E60794 /* JHCustomMenu.m in Sources */,
 				362320C8200AFB4500E60794 /* FTPopOverMenu.m in Sources */,
 				36232126200AFB9C00E60794 /* UIImage+AddOn.swift in Sources */,
@@ -1173,6 +1182,7 @@
 				3623A13020178E6400FFA177 /* SettingVC.swift in Sources */,
 				362320BE200AFB4500E60794 /* BabyBluetooth.m in Sources */,
 				36232121200AFB9C00E60794 /* Int+AddOn.swift in Sources */,
+				F8721C53202315EC007EA8DF /* TimeDataModel.m in Sources */,
 				8D425BAD200C71CF0067D706 /* NetworkTools.swift in Sources */,
 				362320DA200AFB6900E60794 /* StudentModel.swift in Sources */,
 				362320C0200AFB4500E60794 /* BabyCentralManager.m in Sources */,
