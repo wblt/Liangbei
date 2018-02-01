@@ -127,8 +127,8 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = "清肤源智惠面膜"
-        
+        self.title = getLocalizableString(key: "app_name", common: "靓呗智惠面膜");
+			//"清肤源智惠面膜"
         device_name.text = ""
         daojishiLabel.text = ""
         fuduSlider.minimumValue = 0// 设置最小值
@@ -998,8 +998,15 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             
         })
         //  self.moreMenu?.removeFromSuperview()
-        
-        self.moreMenu = JHCustomMenu(dataArr: ["搜索设备", "水油数据", "使用教程", "注销登录","代理","商城", "意见反馈"], origin: CGPoint(x: kScreenFrameW - 125 - 20 , y: 64), width: 125, rowHeight: 44)
+		let searchDevice:String = getLocalizableString(key: "searchDevice", common: "搜索设备")
+		let water_and_oil_data_sheet:String = getLocalizableString(key: "water_and_oil_data_sheet", common: "水油数据")
+		let course:String = getLocalizableString(key: "course", common: "使用教程")
+		let zhuxiao_login:String = getLocalizableString(key: "zhuxiao_login", common: "注销登录")
+//		let app_opinion:String = getLocalizableString(key: "app_opinion", common: "代理")
+//		let app_opinion:String = getLocalizableString(key: "app_opinion", common: "商城")
+		let app_opinion:String = getLocalizableString(key: "app_opinion", common: "意见反馈")
+		
+        self.moreMenu = JHCustomMenu(dataArr: [searchDevice,water_and_oil_data_sheet , course,zhuxiao_login ,"代理","商城",app_opinion ], origin: CGPoint(x: kScreenFrameW - 125 - 20 , y: 64), width: 125, rowHeight: 44)
         
         
         self.moreMenu?.delegate = self
@@ -1122,11 +1129,11 @@ fileprivate extension HomeVC {
                     // 提示没有搜索到设备
                     if btn_Click == 0 {
                         btn_Click = 1;
-                        MBProgressHUD.showHint("亲爱的搜索不到设备,请你检查设备")
+                        MBProgressHUD.showHint(getLocalizableString(key: "check_phone", common: "亲爱的搜索不到设备,请你检查设备") )
                     }
                     self.search_device_btn.isHidden = false;
                     self.search_device_btn.isUserInteractionEnabled = true;
-                    self.search_device_btn.setTitle("搜索不到设备,点击我再次搜索", for: .normal);
+                    self.search_device_btn.setTitle(getLocalizableString(key: "search_no", common: "搜索不到设备,点击我再次搜索") , for: .normal);
                 } else {
                     searchNumber = searchNumber + 1;
                 }
@@ -1323,14 +1330,14 @@ fileprivate extension HomeVC {
             if peripheral != nil {
                 self.isConnect = false
                 LogManager.shared.log("设备连接断开 :\(peripheral!.name!)")
-                let alrtView = UIAlertView(title: "温馨提示", message: "亲爱的,设备已经断开连接请您重新连接", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
+                let alrtView = UIAlertView(title: "温馨提示", message: getLocalizableString(key: "connect_again", common: "亲爱的,设备已经断开连接请您重新连接") , delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
                 alrtView.tag = 102;
                 alrtView.show()
                 // 设置提示
-                self.search_device_btn.setTitle("设备已断开,点击我进行搜索", for: .normal);
+                self.search_device_btn.setTitle(getLocalizableString(key: "machine_no", common: "设备已断开,点击我进行搜索") , for: .normal);
                 self.search_device_btn.isHidden = false;
                 self.search_device_btn.isUserInteractionEnabled = true;
-                self.startLabel.text = "未连接";
+                self.startLabel.text = getLocalizableString(key: "no_connected", common: "未连接") ;
                 self.startAnimation();
                 self.device_name.text = "";
                 

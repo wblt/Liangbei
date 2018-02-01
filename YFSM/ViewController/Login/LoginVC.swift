@@ -62,7 +62,7 @@ class LoginVC: BaseVC {
         Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
             BFunction.shared.hideLoadingMessage()
             if response.error != nil  {
-                SVProgressHUD.showError(withStatus: "登录失败")
+				SVProgressHUD.showError(withStatus: getLocalizableString(key: "login_failed", common: "登录失败"))
                 return
             }
             if let jsonResult = response.value as? Dictionary<String, Any> {
@@ -79,7 +79,7 @@ class LoginVC: BaseVC {
                     let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
                     appDelegate.window?.rootViewController = BaseNavC(rootViewController: homeVC)
                 }else {
-                    SVProgressHUD.showError(withStatus: "登录失败")
+                    SVProgressHUD.showError(withStatus: getLocalizableString(key: "login_failed", common: "登录失败"))
                 }
             }
 

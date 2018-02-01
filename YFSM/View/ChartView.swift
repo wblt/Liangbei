@@ -56,7 +56,7 @@ class ChartView: UIView,ChartViewDelegate,IAxisValueFormatter,IValueFormatter {
         syqIcon.frame = CGRect(x: kScreenFrameW - 180, y: (titleLabel.frame.midY - titleLabel.frame.height / 2) , width: 12, height: 12)
         syqIcon.center.y = titleLabel.center.y
         let syqLabel = UILabel()
-        syqLabel.text = "使用前"
+        syqLabel.text = getLocalizableString(key: "before_use", common: "使用前")
         bgView.addSubview(syqIcon)
         syqLabel.frame = CGRect(x: syqIcon.frame.maxX + 5, y: syqIcon.frame.origin.y, width: 100, height: 50)
         syqLabel.sizeToFit()
@@ -68,7 +68,7 @@ class ChartView: UIView,ChartViewDelegate,IAxisValueFormatter,IValueFormatter {
         syhIcon.frame = CGRect(x: kScreenFrameW - 85, y: (titleLabel.frame.midY - titleLabel.frame.height / 2) , width: 12, height: 12)
         syhIcon.center.y = titleLabel.center.y
         let syhLabel = UILabel()
-        syhLabel.text = "使用后"
+        syhLabel.text = getLocalizableString(key: "after_use", common: "使用后") 
         bgView.addSubview(syhIcon)
         syhLabel.frame = CGRect(x: syhIcon.frame.maxX + 5, y: syhIcon.frame.origin.y, width: 100, height: 50)
         syhLabel.sizeToFit()

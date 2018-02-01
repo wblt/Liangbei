@@ -25,7 +25,7 @@ class SettingVC: BaseVC,UIAlertViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "管理";
+		self.title = getLocalizableString(key: "app_name1", common: "管理");// "管理";
         // Do any additional setup after loading the view.
         self.logoutView.tag = 101;
         self.jiaochengView.tag = 102;

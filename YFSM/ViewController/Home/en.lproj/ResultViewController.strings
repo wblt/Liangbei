@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "5"; ObjectID = "6oR-YR-b6v"; */
+"6oR-YR-b6v.text" = "5";
+
+/* Class = "UILabel"; text = "颜值上升约17点"; ObjectID = "Cwa-9S-LoI"; */
+"Cwa-9S-LoI.text" = "Rise of the color value";
+
+/* Class = "UILabel"; text = "已经完成"; ObjectID = "Lsj-cK-Ivi"; */
+"Lsj-cK-Ivi.text" = "Already completed";
+
+/* Class = "UILabel"; text = "水分上升"; ObjectID = "Qoh-hg-e2J"; */
+"Qoh-hg-e2J.text" = "Water rise";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "UH2-vE-nxK"; */
+"UH2-vE-nxK.text" = "10";
+
+/* Class = "UILabel"; text = "弹性上升"; ObjectID = "Xp1-Id-AE0"; */
+"Xp1-Id-AE0.text" = "Elastic rise";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "Ydc-Yi-c07"; */
+"Ydc-Yi-c07.text" = "5";
+
+/* Class = "UIButton"; normalTitle = "关闭"; ObjectID = "bma-A2-DIj"; */
+"bma-A2-DIj.normalTitle" = "Close";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "ouR-Q4-l7e"; */
+"ouR-Q4-l7e.text" = "10";
+
+/* Class = "UILabel"; text = "紧致度上升"; ObjectID = "wjx-yh-hfs"; */
+"wjx-yh-hfs.text" = "Tightness rise";
+
+/* Class = "UILabel"; text = "油分下降"; ObjectID = "xau-MK-FM3"; */
+"xau-MK-FM3.text" = "Oil drop";

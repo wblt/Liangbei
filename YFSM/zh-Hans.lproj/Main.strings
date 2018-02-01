@@ -1,0 +1,84 @@
+
+/* Class = "UITextField"; placeholder = "请输入手机号"; ObjectID = "0H6-g0-iSG"; */
+"0H6-g0-iSG.placeholder" = "请输入手机号";
+
+/* Class = "UIButton"; normalTitle = "模拟多条统计数据"; ObjectID = "2EO-H7-DVE"; */
+"2EO-H7-DVE.normalTitle" = "模拟多条统计数据";
+
+/* Class = "UIButton"; normalTitle = "清空统计数据"; ObjectID = "3oQ-wf-nyO"; */
+"3oQ-wf-nyO.normalTitle" = "清空统计数据";
+
+/* Class = "UITextField"; placeholder = "请输入密码(6-10位数字与字母的组合)"; ObjectID = "3qo-a6-cGZ"; */
+"3qo-a6-cGZ.placeholder" = "请输入密码(6-10位数字与字母的组合)";
+
+/* Class = "UILabel"; text = "开始"; ObjectID = "4LV-Up-edz"; */
+"4LV-Up-edz.text" = "开始";
+
+/* Class = "UIButton"; normalTitle = "已有账号？点此登录"; ObjectID = "Bi3-Hy-E4f"; */
+"Bi3-Hy-E4f.normalTitle" = "已有账号？点此登录";
+
+/* Class = "UIButton"; normalTitle = "新用户注册"; ObjectID = "EwW-vo-q7s"; */
+"EwW-vo-q7s.normalTitle" = "新用户注册";
+
+/* Class = "UILabel"; text = "33333"; ObjectID = "HqQ-1F-1hv"; */
+"HqQ-1F-1hv.text" = "33333";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "HuX-XZ-Ir2"; */
+"HuX-XZ-Ir2.normalTitle" = "注册";
+
+/* Class = "UITextField"; placeholder = "请输入密码(6-10位数字与字母的组合)"; ObjectID = "I9g-HE-e6a"; */
+"I9g-HE-e6a.placeholder" = "请输入密码(6-10位数字与字母的组合)";
+
+/* Class = "UILabel"; text = "未连接"; ObjectID = "PMo-I6-rYF"; */
+"PMo-I6-rYF.text" = "未连接";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "QsY-Lf-bsq"; */
+"QsY-Lf-bsq.text" = "8";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "QvR-0w-7wH"; */
+"QvR-0w-7wH.normalTitle" = "登录";
+
+/* Class = "UIButton"; normalTitle = "提交"; ObjectID = "TfG-Pq-XTf"; */
+"TfG-Pq-XTf.normalTitle" = "提交";
+
+/* Class = "UIButton"; normalTitle = "关闭音乐"; ObjectID = "VxJ-CB-bTY"; */
+"VxJ-CB-bTY.normalTitle" = "关闭音乐";
+
+/* Class = "UILabel"; text = "01:22"; ObjectID = "W5t-wa-bhO"; */
+"W5t-wa-bhO.text" = "01:22";
+
+/* Class = "UIButton"; normalTitle = "提拉按摩"; ObjectID = "Wm6-s1-12f"; */
+"Wm6-s1-12f.normalTitle" = "提拉按摩";
+
+/* Class = "UILabel"; text = "水:0%"; ObjectID = "ZDt-KJ-2uW"; */
+"ZDt-KJ-2uW.text" = "水:0%";
+
+/* Class = "UIButton"; normalTitle = "吸附净化"; ObjectID = "eIf-F3-jYk"; */
+"eIf-F3-jYk.normalTitle" = "吸附净化";
+
+/* Class = "UILabel"; text = "加强"; ObjectID = "fmU-0P-Lyu"; */
+"fmU-0P-Lyu.text" = "加强";
+
+/* Class = "UILabel"; text = "油:0%"; ObjectID = "hmM-NY-lwY"; */
+"hmM-NY-lwY.text" = "油:0%";
+
+/* Class = "UIButton"; normalTitle = "获取验证码"; ObjectID = "iyy-oR-B42"; */
+"iyy-oR-B42.normalTitle" = "获取验证码";
+
+/* Class = "UITextField"; placeholder = "请输入手机号"; ObjectID = "lLY-RD-rRx"; */
+"lLY-RD-rRx.placeholder" = "请输入手机号";
+
+/* Class = "UIButton"; normalTitle = "搜索不到设备，点击我再次搜索"; ObjectID = "pK6-7t-P9l"; */
+"pK6-7t-P9l.normalTitle" = "搜索不到设备，点击我再次搜索";
+
+/* Class = "UILabel"; text = "减弱"; ObjectID = "sRZ-wu-I2e"; */
+"sRZ-wu-I2e.text" = "减弱";
+
+/* Class = "UITextField"; placeholder = "验证码"; ObjectID = "tpd-Uy-wc4"; */
+"tpd-Uy-wc4.placeholder" = "验证码";
+
+/* Class = "UIButton"; normalTitle = "精华导入"; ObjectID = "u5c-Su-KVi"; */
+"u5c-Su-KVi.normalTitle" = "精华导入";
+
+/* Class = "UIButton"; normalTitle = "开始体验"; ObjectID = "wAL-Ns-GNX"; */
+"wAL-Ns-GNX.normalTitle" = "开始体验";

@@ -15,7 +15,7 @@ class SuggestionsVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "意见反馈"
+        self.title = getLocalizableString(key: "app_opinion", common: "意见反馈")
         textView.layer.borderColor = UIColor.lightGray.cgColor;
         textView.layer.borderWidth = 0.5;
         textView.layer.cornerRadius = 8;

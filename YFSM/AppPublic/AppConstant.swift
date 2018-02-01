@@ -217,4 +217,7 @@ func ConvertToBigScreen(_ w: CGFloat) -> CGFloat {
 //
 //let kNavButtonItemCustomOffset: CGFloat = 12
 
-
+//MARK 国际化 设置key
+func getLocalizableString(key:String, common:String) -> String {
+	return NSLocalizedString(key, tableName:"Localizable", bundle:Bundle.main, value:"", comment:"");
+}

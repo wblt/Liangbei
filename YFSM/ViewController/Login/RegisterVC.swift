@@ -21,7 +21,7 @@ class RegisterVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "注册";
+        self.title =  getLocalizableString(key: "app_regist", common: "注册")
         // Do any additional setup after loading the view.
     }
 
@@ -54,7 +54,7 @@ class RegisterVC: BaseVC {
             BFunction.shared.hideLoadingMessage()
             if response.error != nil  {
                 
-                SVProgressHUD.showError(withStatus: "注册失败")
+                SVProgressHUD.showError(withStatus: getLocalizableString(key: "regist_failed", common: "注册失败"))
                 return
             }
             if let jsonResult = response.value as? Dictionary<String, Any> {
@@ -70,10 +70,10 @@ class RegisterVC: BaseVC {
                     let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
                     appDelegate.window?.rootViewController = BaseNavC(rootViewController: homeVC)
                 }else if jsonResult["result"] as! Int == -2 {
-                    SVProgressHUD.showError(withStatus: "已经注册 ，去登录")
+                    SVProgressHUD.showError(withStatus: getLocalizableString(key: "regist_had", common: "用户已注册,请登录"))
                 }else {
                     
-                    SVProgressHUD.showError(withStatus: "注册失败")
+                    SVProgressHUD.showError(withStatus: getLocalizableString(key: "regist_error", common: "注册失败,连接服务器失败"))
                 }
             }
             

@@ -1,0 +1,116 @@
+/* 
+  Localizable.strings
+  YFSM
+
+  Created by yanghuan on 2018/2/1.
+  Copyright © 2018年 wb. All rights reserved.
+*/
+"app_name"="GOLBEST Smart Mask";
+"app_name1" = "Administration";
+"app_login" = "Login";
+"app_regist" = "Register";
+"updateAPP" = "Version upgrades";
+"app_update_name" = "GOLBEST Smart Mask";
+"txt_cancel" = "Cancel";
+"updata_message" = "Update BUG";
+"txt_update" = "Update";
+"app_opinion" = "Suggestion feedback";
+"navigation_drawer_open" = "Open navigation drawer";
+"navigation_drawer_close" = "Close navigation drawer";
+"updateExit" = "I quit, please update the version in use";
+"downloadMyApp" = "Downloading the status bar...";
+
+"searchDevice" = "Search equipment";
+"skin_moisture" = "Skin moisture/%";
+"skin_oil" = "Skin oil/%";
+"skin_elastic" = "Skin elasticity";
+"skin_compactness" = "Skin tightness";
+"before_use" = "Before use";
+"after_use" = "After use";
+"water_and_oil_data_sheet" = "Water and oil data table";
+"course" = "Use a tutorial";
+"music" = "Music";
+//<!--护肤完成弹出窗口-- = "
+"text1" = "Already completed";
+"text2" = "Rise of the color value";
+"text3" = "spot";
+
+"water_up" = "Water rise";
+"oil_down" = "Oil drop";
+"jinzhidu_up" = "Tightness rise";
+"tanxing_up" = "Elastic rise";
+
+"close" = "Close";
+
+
+
+//<!--主页面文字-- = "
+"search_no" = "No search for equipment, click me in the search";
+"water_percent" = "Water：00%";
+"oil_percent" = "Oil：00%";
+"clean" = "Adsorption purification";
+"add" = "Essence introduction";
+"down" = "Weaken";
+"up" = "Strengthen";
+"no_connected" = "Unconnected";
+"start" = "Start";
+"run" = "Running";
+"login" = "Login";
+"teach" = "Use tutorial";
+"oil_list" = "Water and oil meter";
+"suggestion" = "Suggestion feedback";
+"pull" = "Massage and tyre";
+
+//<!--登陆界面-- = "
+"password" = "password (6-10 digit or alphabet)";
+"login1" = "Login";
+"regist" = "Register";
+
+//注册界面
+"regist_checkcode"="Verification Code";
+"login_again"="Already account? Point this landing";
+
+
+//<!--loginactivity --="
+"password_less"="The password is less than 6 bits";
+"login_success"="Login success";
+"login_error"="Account or password error";
+"login_failed"="Login failed, connection server failed";
+
+//<!--registactivity --="
+"regist_success"="Regist success";
+"regist_had"="The user has registered, please log in";
+"regist_error"="Failed registration, connection server failed";
+"email_error"="Mailbox error";
+"password_failed"="Password format is wrong";
+"user_number"="Please enter the mailbox";
+
+//<!--mainactivity--="
+"machine_no"="The device has been disconnected,and click on me for a search";
+"connect_again"="Dear,the device has disconnected,please reconnect";
+"search_now"="In the search...";
+"nomachine_connect"="No connection equipment";
+"chose_machine"="Selection of equipment";
+"search_again"="Search for no equipment, click me again";
+"check_phone"="Dear search for no equipment, please check the equipment";
+"please_chose"="Please select the device";
+"connect_now"="The device is being connected...";
+"water"="Water";
+"oil"="Oil";
+"machine_connected"="device connected";
+
+//<!--manageactivity--="
+"zhuxiao_login"="Logout";
+"zhuxiao_ok"="Logout success";
+
+//<!--opstionactivity--="
+"enter"="Please enter...";
+"call_way"="Contact mode(mailbox)";
+"commit"="Submit";
+
+
+//<!--dialog--="
+"exit"="Sign out";
+"connect_again_dialog"="Reconnect";
+"teach_way"="Use a tutorial";
+"connect_failed"="connection failed";

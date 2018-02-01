@@ -20,7 +20,7 @@ class ChartVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "水油数据表"
+        self.title = getLocalizableString(key: "water_and_oil_data_sheet", common: "水油数据表")
         self.automaticallyAdjustsScrollViewInsets = false;
         getdata();
         
@@ -90,14 +90,14 @@ class ChartVC: BaseVC {
         chartView = ChartView()
         chartView.backgroundColor = UIColor.clear
         chartView.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(kScreenFrameW), height: CGFloat(kScreenFrameH / 2) - 50)
-        chartView.setData(data1Array: water1Array, data2Array: water2Array, titlesArray: xTitles, title: "皮肤水份/%")
+        chartView.setData(data1Array: water1Array, data2Array: water2Array, titlesArray: xTitles, title: getLocalizableString(key: "skin_moisture", common: "皮肤水份/%"))
         chartView.setMaxValue(max: 100, min: 0,count: 11)
         scrollView.addSubview(chartView)
         
         let chart2View = ChartView()
         chart2View.backgroundColor = UIColor.clear
         chart2View.frame = CGRect(x: CGFloat(0), y: chartView.frame.maxY + 15, width: CGFloat(kScreenFrameW), height: CGFloat(kScreenFrameH / 2) - 50)
-        chart2View.setData(data1Array: oil1Array, data2Array: oil2Array, titlesArray: xTitles, title: "皮肤油份/%")
+        chart2View.setData(data1Array: oil1Array, data2Array: oil2Array, titlesArray: xTitles, title: getLocalizableString(key: "skin_oil", common: "皮肤油份/%") )
         chart2View.setMaxValue(max: 100, min: 0,count: 11)
         scrollView.addSubview(chart2View)
         
@@ -105,7 +105,7 @@ class ChartVC: BaseVC {
         let chart3View = ChartView()
         chart3View.backgroundColor = UIColor.clear
         chart3View.frame = CGRect(x: CGFloat(0), y: chart2View.frame.maxY + 15, width: CGFloat(kScreenFrameW), height: CGFloat(kScreenFrameH / 2) - 50)
-        chart3View.setData(data1Array: jin1Array, data2Array: jin2Array, titlesArray: xTitles, title: "皮肤紧致度/%")
+        chart3View.setData(data1Array: jin1Array, data2Array: jin2Array, titlesArray: xTitles, title: getLocalizableString(key: "skin_compactness", common: "皮肤紧致度/%") )
         chart3View.setMaxValue(max: 8, min: 2,count: 6)
         scrollView.addSubview(chart3View)
         
@@ -113,7 +113,7 @@ class ChartVC: BaseVC {
         let chart4View = ChartView()
         chart4View.backgroundColor = UIColor.clear
         chart4View.frame = CGRect(x: CGFloat(0), y: chart3View.frame.maxY + 15, width: CGFloat(kScreenFrameW), height: CGFloat(kScreenFrameH / 2) - 50)
-        chart4View.setData(data1Array: tan1Array, data2Array: tan2Array, titlesArray: xTitles, title: "皮肤弹性值/%")
+        chart4View.setData(data1Array: tan1Array, data2Array: tan2Array, titlesArray: xTitles, title: getLocalizableString(key: "skin_elastic", common: "皮肤弹性值/%") )
         chart4View.setMaxValue(max: 8, min: 2,count: 6)
         scrollView.addSubview(chart4View)
     }
