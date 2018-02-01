@@ -39,7 +39,7 @@ class BaseWebView: BaseVC {
         
         self.navigationItem.title = navTitle
         if navTitle.isEmpty {
-            self.navigationItem.title = "加载中..."
+            self.navigationItem.title = getLocalizableString(key: "tipLoading", common: "加载中...")
         }
         setupWebView()
         setupProgressView()

@@ -47,7 +47,7 @@ class DeviceManager {
             
             BFunction.shared.hideLoadingMessage()
             
-            BFunction.shared.showAlert(title: "提示", subTitle: "成功清空缓存!", cancelBtnTitle: "确定", cancelBtnAction: {
+            BFunction.shared.showAlert(title: getLocalizableString(key: "tips", common: "温馨提示"), subTitle: getLocalizableString(key: "clean_cache", common: "成功清空缓存!"), cancelBtnTitle: getLocalizableString(key: "sure", common: "确定") , cancelBtnAction: {
                 
                 completionBlock?()
             })

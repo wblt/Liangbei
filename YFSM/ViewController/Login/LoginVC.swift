@@ -45,11 +45,11 @@ class LoginVC: BaseVC {
 //        let net = NetWork.init();
 //        net.getlogin();
         if _numberTextField.text?.length != 11 {
-            SVProgressHUD.showError(withStatus: "请输入正确的手机号")
+            SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number_right", common: "请输入正确的手机号"))
             return
         }
         if _passwordTextField.text?.length == 0 {
-            SVProgressHUD.showError(withStatus: "请输入密码")
+            SVProgressHUD.showError(withStatus:getLocalizableString(key: "password", common: "请输入密码") )
             return
         }
 //        let urlString = "http://hi-watch.com.cn/tpiot/app/login"

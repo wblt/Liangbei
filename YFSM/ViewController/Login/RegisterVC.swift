@@ -33,15 +33,16 @@ class RegisterVC: BaseVC {
 
     @IBAction func registerAction(_ sender: UIButton) {
         if _numberTextField.text?.length != 11 {
-            SVProgressHUD.showError(withStatus: "请输入手机号")
+            SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number", common: "请输入手机号"))
             return
         }
         if (_passwordTextField.text?.length)! < 6 {
-            SVProgressHUD.showError(withStatus: "请设置密码(6-10位数字与字母的组合)")
+			//"请设置密码(6-10位数字与字母的组合)"
+            SVProgressHUD.showError(withStatus: getLocalizableString(key: "password_failed", common: "密码格式不对") )
             return
         }
         if _codeTextField.text != self.code {
-            SVProgressHUD.showError(withStatus: "验证码错误")
+            SVProgressHUD.showError(withStatus: getLocalizableString(key: "checkcode_error", common: "验证码错误") )
             return
         }
         let urlString = api_service+"/register"
@@ -91,17 +92,16 @@ class RegisterVC: BaseVC {
         Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
             BFunction.shared.hideLoadingMessage()
             if response.error != nil  {
-             
-                SVProgressHUD.showError(withStatus: "获取验证码失败")
+                SVProgressHUD.showError(withStatus:getLocalizableString(key: "get_code_error", common: "获取验证码失败")  )
                 return
             }
             if let jsonResult = response.value as? Dictionary<String, Any> {
                 if jsonResult["result"] as! Int == 0 {
                     self.code = (jsonResult["vercode"] as! NSNumber).stringValue
-                    SVProgressHUD.showSuccess(withStatus: "已发送验证码")
+                    SVProgressHUD.showSuccess(withStatus:getLocalizableString(key: "send_code", common: "已发送验证码") )
                 }else {
                     
-                    SVProgressHUD.showError(withStatus: "获取验证码失败")
+                    SVProgressHUD.showError(withStatus: getLocalizableString(key: "get_code_error", common: "获取验证码失败"))
                 }
             }
             

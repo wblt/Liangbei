@@ -34,7 +34,7 @@ class BaseRequest {
             case .notReachable, .unknown:
                 
                 self.isNetWorkUsable = false
-                BFunction.shared.showErrorMessage(tipNetError)
+                BFunction.shared.showErrorMessage(getLocalizableString(key: "tipNetError", common: tipNetError))
             default:
                 
                 self.isNetWorkUsable = true
@@ -146,7 +146,7 @@ extension BaseRequest {
             LogManager.shared.log("uploadProgress.totalUnitCount ------ ----- --- :\(uploadProgress.totalUnitCount)")
             LogManager.shared.log("上传进度 ------ ----- --- :\(progress)")
             
-            BFunction.shared.showProgress(progress, msg: "已完成\(Int(progress * 100))%")
+            BFunction.shared.showProgress(progress, msg: getLocalizableString(key: "completed", common: "已完成") + "\(Int(progress * 100))%")
             
             }, downloadProgress: nil) { (response: URLResponse, any: Any?, error: Error?) in
                 
@@ -251,7 +251,7 @@ extension BaseRequest {
                     
                     AccountManager.shared.logoutAccount(callBack: {
                         
-                        BFunction.shared.showAlert(title: "提示", subTitle: "您的身份令牌已过期，请重新登录", cancelBtnTitle: "重新登录", cancelBtnAction: {
+                        BFunction.shared.showAlert(title: getLocalizableString(key: "tips", common: "提示") , subTitle: getLocalizableString(key: "token_past", common: "您的身份令牌已过期，请重新登录"), cancelBtnTitle: getLocalizableString(key: "Re_login", common: "重新登录"), cancelBtnAction: {
                             
                             AccountManager.shared.gotoLogin()
                         })
@@ -270,8 +270,7 @@ extension BaseRequest {
                     AccountManager.shared.logoutAccount(callBack: {
                         
                         if !(UIApplication.sharedDelegate().window?.rootViewController is LoginNavC) {
-          
-                            BFunction.shared.showAlert(title: "提示", subTitle: "您的身份令牌已过期，请重新登录", cancelBtnTitle: "重新登录", cancelBtnAction: {
+                            BFunction.shared.showAlert(title: getLocalizableString(key: "tips", common: "提示"), subTitle: getLocalizableString(key: "token_past", common: "您的身份令牌已过期，请重新登录") , cancelBtnTitle: getLocalizableString(key: "Re_login", common: "重新登录") , cancelBtnAction: {
                                 
                                 AccountManager.shared.gotoLogin()
                             })
@@ -337,7 +336,7 @@ extension BaseRequest {
     func isNetworkReachableWithTip(_ isTip: Bool) -> Bool {
         
         if !isNetWorkUsable && isTip {
-            BFunction.shared.showErrorMessage("似乎已和网络断开了连接")
+            BFunction.shared.showErrorMessage(getLocalizableString(key: "tipNetBreak", common: "似乎已和网络断开了连接"))
         }
         
         return isNetWorkUsable
@@ -350,12 +349,22 @@ extension BaseRequest {
         LogManager.shared.log(error._code, msg: error.localizedDescription)
         
         switch error._code {
-        case -1009: BFunction.shared.showErrorMessage("似乎已和网络断开了连接")
-        case -1004: BFunction.shared.showErrorMessage("与服务器断开连接")
+        case -1009: BFunction.shared.showErrorMessage(getLocalizableString(key: "tipNetBreak", common: "似乎已和网络断开了连接") )
+        case -1004: BFunction.shared.showErrorMessage(getLocalizableString(key: "tipNetBreakWithServer", common: "与服务器断开连接") )
         case -999 : LogManager.shared.log("服务器主动断开网络请求")
-        case -1001: BFunction.shared.showErrorMessage(tipNetTimeOut)
-        case -1011: BFunction.shared.showErrorMessage("攻城狮正在抢修服务器...")
-        default   : BFunction.shared.showErrorMessage(tipNetError)
+        case -1001: BFunction.shared.showErrorMessage(getLocalizableString(key: "tipNetTimeOut", common: tipNetTimeOut)  )
+        case -1011: BFunction.shared.showErrorMessage(getLocalizableString(key: "tipNetServerRepairing", common: "攻城狮正在抢修服务器...")  )
+        default   : BFunction.shared.showErrorMessage(getLocalizableString(key: "tipNetError", common: tipNetError) )
         }
     }
 }
+
+/*
+"tipNetError"   = "您的网络好像有点问题"
+"tipNetTimeOut" = "请求超时"
+"tipLoading"    = "正在加载"
+"tipNetBreak"   = "似乎已和网络断开了连接"
+"tipNetBreakWithServer" = "与服务器断开连接"
+"tipNetServerBreakRequest" = "服务器主动断开网络请求"
+"tipNetServerRepairing" = "攻城狮正在抢修服务器..."
+*/

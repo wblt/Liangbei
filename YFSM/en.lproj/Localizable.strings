@@ -65,6 +65,11 @@
 "pull" = "Massage and tyre";
 "more" = "More";
 
+//代理
+//商城
+"agent" = "Agent";
+"shopping_mall" = "Shopping Mall";
+
 //<!--登陆界面-- = "
 "password" = "password (6-10 digit or alphabet)";
 "login1" = "Login";
@@ -73,6 +78,10 @@
 //注册界面
 "regist_checkcode"="Verification Code";
 "login_again"="Already account? Point this landing";
+"get_code"="Get Verification Code";
+"checkcode_error" = "Verification Code Error";
+"get_code_error"="Get Verification Code Error";
+"send_code"="Sent verification code";
 
 
 //<!--loginactivity --="
@@ -88,6 +97,7 @@
 "email_error"="Mailbox error";
 "password_failed"="Password format is wrong";
 "user_number"="Please enter the mailbox";
+"user_number_right"="Please enter the correct phone number";
 
 //<!--mainactivity--="
 "machine_no"="The device has been disconnected,and click on me for a search";
@@ -118,3 +128,46 @@
 "connect_again_dialog"="Reconnect";
 "teach_way"="Use a tutorial";
 "connect_failed"="connection failed";
+
+//弹框  文字
+"cancel"="Cancel";
+"sure" = "OK";
+"tips" = "Reminder";
+"I_know" = "Got it";
+"clean_cache" = "Successful emptying caching!";
+"click_beginBtn" = "Please click the start button first";
+"login_out" = "Whether or not to quit?";
+
+//网络
+"tipNetError"   = "Your network seems to be a bit o;f a problem";
+"tipNetTimeOut" = "Request timeout";
+"tipLoading"    = "Loading...";
+"tipNetBreak"   = "It seems to have been disconnected from the network";
+"tipNetBreakWithServer" = "Disconnect the connection with the server";
+"tipNetServerBreakRequest" = "Server interrupt the network requests";
+"tipNetServerRepairing" = "The engineer is repairing the server...";
+
+"completed" = "Have completed";
+
+"token_past" = "Your identity token has expired, please log in again";
+"Re_login" = "Re logged in";
+
+// emptyPageType
+
+"emptyPageType_netError" = "Network load failed, please click again";
+"emptyPageType_emptyData"= "There is nothing~";
+"emptyPageType_emptyComment" = "Please submit your comments~~";
+
+//foot
+"foot_bottom" = "There have been down~~";
+
+//获取面膜数据
+"mask_data_fail" = "Get mask data fail";
+"mask_data_success" = "Get mask data success";
+
+//意见反馈
+"suggestion_input" =  "Please input your feedback";
+"suggestion_tel" =  "Please input your phone number";
+"suggestion_fail" = "Feedback failure";
+"suggestion_success" = "Feedback success";
+

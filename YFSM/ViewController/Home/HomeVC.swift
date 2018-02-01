@@ -506,7 +506,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
     
         if isFristLaunch == true {
             
-            let alrtView = UIAlertView(title: "提示", message: "请先点击开始按钮", delegate: nil, cancelButtonTitle: "确定")
+            let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示"), message:getLocalizableString(key: "click_beginBtn", common: "请先点击开始按钮") , delegate: nil, cancelButtonTitle: getLocalizableString(key: "sure", common: "确定"))
             alrtView.show()
             return
         }
@@ -601,7 +601,8 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         if isFristLaunch == true {
             
             
-            let alerView  = UIAlertView(title:  "提示", message: "请先点击开始按钮", delegate: nil, cancelButtonTitle: "确定")
+          //  let alerView  = UIAlertView(title:  "提示", message: "请先点击开始按钮", delegate: nil, cancelButtonTitle: "确定")
+			let alerView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示"), message:getLocalizableString(key: "click_beginBtn", common: "请先点击开始按钮") , delegate: nil, cancelButtonTitle: getLocalizableString(key: "sure", common: "确定"))
             alerView.show()
             return
         }
@@ -615,7 +616,8 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
     @IBAction func writeAddClick() {
         
         if isFristLaunch == true {
-            let alerView  = UIAlertView(title:  "提示", message: "请先点击开始按钮", delegate: nil, cancelButtonTitle: "确定")
+           // let alerView  = UIAlertView(title:  "提示", message: "请先点击开始按钮", delegate: nil, cancelButtonTitle: "确定")
+			let alerView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示"), message:getLocalizableString(key: "click_beginBtn", common: "请先点击开始按钮") , delegate: nil, cancelButtonTitle: getLocalizableString(key: "sure", common: "确定"))
             alerView.show()
             return
         }
@@ -713,7 +715,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             let date = (Date.currentTime().substringToIndex(10)!.replacingOccurrences(of: "-", with: "") as NSString).integerValue
             
             let searchResultModel = ChartModel.searchSingle(withWhere: ["date":date], orderBy: nil) as! ChartModel
-            self.startLabel.text = getLocalizableString(key: "Start", common: "开始") 
+            self.startLabel.text = getLocalizableString(key: "start", common: "开始") 
             searchResultModel.oil2 = self.youfenValue
             searchResultModel.water2 = self.shuifenValue
             searchResultModel.date = date
@@ -753,13 +755,13 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             jin1Value = beforValue();
             tan1Value = beforValue();
             
-            self.startLabel.text = "运行中"
+            self.startLabel.text = getLocalizableString(key: "run", common: "运行中")
             let flag = model.saveToDB()
             print("插入标志：+==="+flag);
         }else if daojishi != "00:00" && fenzhong < 10  {
             bubble.start_bubbleAnimation();
             daojishiLabel.isHidden = false
-            self.startLabel.text = "运行中"
+            self.startLabel.text = getLocalizableString(key: "run", common: "运行中")
             // 拼接数据
             var bb:String = "\(miao)"
             if bb.length == 1 {
@@ -770,7 +772,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             
         }else if fenzhong >= 10{
             bubble.start_bubbleAnimation();
-            self.startLabel.text = "运行中"
+            self.startLabel.text = getLocalizableString(key: "run", common: "运行中")
             daojishiLabel.isHidden = false
             var bb:String = "\(miao)"
             if bb.length == 1 {
@@ -780,7 +782,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
             daojishiLabel.text = "\(fenzhong):"+bb
         }
         else{
-            self.startLabel.text = getLocalizableString(key: "Start", common: "开始") 
+            self.startLabel.text = getLocalizableString(key: "start", common: "开始") 
             daojishiLabel.isHidden = true
         
         }
@@ -792,7 +794,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         let userDefault = UserDefaults.standard
         let swithdd:Bool = userDefault.bool(forKey: "switchOn")
         let sds:String = self.startLabel.text!;
-        if sds.isEqual("运行中") {
+        if sds.isEqual(getLocalizableString(key: "run", common: "运行中") ) {
             playButton.isHidden = false;
             if swithdd == false {
                 playButton.setTitle(getLocalizableString(key: "close_music", common: "关闭音乐") , for: UIControlState.normal)
@@ -980,10 +982,9 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         youfenIMGV.image = newImage2
         youfenIMGV.frame = CGRect(x: self.youfenBGV.frame.origin.x + 1, y: self.youfenBGV.frame.maxY - (youfenClipH / 2), width: 15, height: youfenClipH / 2)
         
-        
-        
-        shuifenLabel.text = "水:\(self.shuifenValue!)%"
-        youfenLabel.text = "油:\(self.youfenValue!)%"
+		
+        shuifenLabel.text = getLocalizableString(key: "water", common: "水") + ":\(self.shuifenValue!)%"
+        youfenLabel.text =  getLocalizableString(key: "oil", common: "油") + ":\(self.youfenValue!)%"
     }
     
     
@@ -1002,11 +1003,11 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
 		let water_and_oil_data_sheet:String = getLocalizableString(key: "water_and_oil_data_sheet", common: "水油数据")
 		let course:String = getLocalizableString(key: "course", common: "使用教程")
 		let zhuxiao_login:String = getLocalizableString(key: "zhuxiao_login", common: "注销登录")
-//		let app_opinion:String = getLocalizableString(key: "app_opinion", common: "代理")
-//		let app_opinion:String = getLocalizableString(key: "app_opinion", common: "商城")
+		let agent:String = getLocalizableString(key: "agent", common: "代理")
+		let shopping_mall:String = getLocalizableString(key: "shopping_mall", common: "商城")
 		let app_opinion:String = getLocalizableString(key: "app_opinion", common: "意见反馈")
 		
-        self.moreMenu = JHCustomMenu(dataArr: [searchDevice,water_and_oil_data_sheet , course,zhuxiao_login ,"代理","商城",app_opinion ], origin: CGPoint(x: kScreenFrameW - 125 - 20 , y: 64), width: 125, rowHeight: 44)
+        self.moreMenu = JHCustomMenu(dataArr: [searchDevice,water_and_oil_data_sheet , course,zhuxiao_login ,agent,shopping_mall,app_opinion ], origin: CGPoint(x: kScreenFrameW - 125 - 20 , y: 64), width: 125, rowHeight: 44)
         
         
         self.moreMenu?.delegate = self
@@ -1045,7 +1046,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         }
         if indexPath.row == 3 {
             
-            let alrtView = UIAlertView(title: "温馨提示", message: "是否确定退出？", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
+            let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示") , message: getLocalizableString(key: "login_out", common: "是否确定退出？") , delegate: self, cancelButtonTitle: getLocalizableString(key: "cancel", common: "取消"), otherButtonTitles: getLocalizableString(key: "cancel", common: "确定"))
             alrtView.tag = 101;
             alrtView.show()
         }
@@ -1318,7 +1319,7 @@ fileprivate extension HomeVC {
             if peripheral != nil {
                 self.isConnect = false
                 LogManager.shared.log("设备连接失败 :\(peripheral!.name!)")
-                MBProgressHUD.showHint("设备连接失败 :\(peripheral!.name!)")
+                MBProgressHUD.showHint(getLocalizableString(key: "machine_connected_failed", common: "设备连接失败") + " :\(peripheral!.name!)")
             }
         }
         
@@ -1330,7 +1331,7 @@ fileprivate extension HomeVC {
             if peripheral != nil {
                 self.isConnect = false
                 LogManager.shared.log("设备连接断开 :\(peripheral!.name!)")
-                let alrtView = UIAlertView(title: "温馨提示", message: getLocalizableString(key: "connect_again", common: "亲爱的,设备已经断开连接请您重新连接") , delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
+                let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示") , message: getLocalizableString(key: "connect_again", common: "亲爱的,设备已经断开连接请您重新连接") , delegate: self, cancelButtonTitle: getLocalizableString(key: "cancel", common: "取消") , otherButtonTitles: getLocalizableString(key: "sure", common: "确定"))
                 alrtView.tag = 102;
                 alrtView.show()
                 // 设置提示

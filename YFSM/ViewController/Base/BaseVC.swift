@@ -145,11 +145,11 @@ extension BaseVC: BFEmptyDataSetSource {
         
         switch emptyPageType {
         case .netError:
-            text = "网络加载失败，请点击重试"
+            text = getLocalizableString(key: "emptyPageType_netError", common: "网络加载失败，请点击重试")
         case .emptyData:
-            text = "空空如也~"
+            text = getLocalizableString(key: "emptyPageType_emptyData", common: "空空如也~")
         case .emptyComment:
-            text = "客官快把评论放碗里吧~~"
+            text = getLocalizableString(key: "emptyPageType_emptyComment", common: "客官快把评论放碗里吧~~")
         }
         
         label.text = text
@@ -235,7 +235,7 @@ extension BaseVC {
                 self?.pageNumber += 1
                 callback()
             })
-            footer?.setTitle("已经到底啦～", for: MJRefreshState.noMoreData)
+            footer?.setTitle(getLocalizableString(key: "foot_bottom", common: "已经到底啦～") , for: MJRefreshState.noMoreData)
             footer?.isHidden = true
             
             taget.mj_footer = footer

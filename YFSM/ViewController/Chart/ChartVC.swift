@@ -135,7 +135,7 @@ class ChartVC: BaseVC {
         Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
             BFunction.shared.hideLoadingMessage()
             if response.error != nil  {
-                SVProgressHUD.showError(withStatus: "获取面膜数据失败")
+                SVProgressHUD.showError(withStatus: getLocalizableString(key: "mask_data_fail", common: "获取面膜数据失败") )
                 return
             }
             if let jsonResult = response.value as? Dictionary<String, Any> {
@@ -143,7 +143,7 @@ class ChartVC: BaseVC {
                     self.initEView(flag: "1");
                 } else {
                     if jsonResult["result"] as! Int == 0 {
-                        SVProgressHUD.showInfo(withStatus: "获取面膜数据成功")
+                        SVProgressHUD.showInfo(withStatus: getLocalizableString(key: "mask_data_success", common: "获取面膜数据成功") )
                         let data:Array<Dictionary> = jsonResult["data"] as! Array<Dictionary<String,Any>>;
                         var beanArray:[FaceDataModel] = [FaceDataModel]()
                         for item in data {
@@ -156,7 +156,7 @@ class ChartVC: BaseVC {
                         self.beanArrassy = beanArray;
                         self.initEView(flag: "2");
                     }else {
-                        SVProgressHUD.showError(withStatus: "获取面膜数据失败")
+                        SVProgressHUD.showError(withStatus: getLocalizableString(key: "mask_data_fail", common: "获取面膜数据失败") )
                     }
                 }
                 

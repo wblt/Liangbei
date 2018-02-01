@@ -48,7 +48,7 @@
 
 
 //<!--主页面文字--="
-"search_no"="搜索不到设备，点击我在次搜索";
+"search_no"="搜索不到设备，点击我再次搜索";
 "water_percent"="水：00%";
 "oil_percent"="油：00%";
 "clean"="吸附净化";
@@ -58,13 +58,17 @@
 "up"="加强";
 "no_connected"="未连接";
 "start"="开始";
-"run"="运行";
+"run"="运行中";
 "login"="立即登录";
 "teach"="使用教程";
 "oil_list"="水油表";
 "suggestion"="意见反馈";
 "more" = "更多";
 
+//代理
+//商城
+"agent" = "代理";
+"shopping_mall" = "商城";
 
 //<!--登陆界面--="
 "password"="请输入密码(6-10位数字或字母)";
@@ -76,6 +80,10 @@
 "regist_checkcode"="验证码";
 "login_again"="已有账号？点此登陆";
 "get_code"="获取验证码";
+"checkcode_error" = "验证码错误";
+"get_code_error"="获取验证码失败";
+"send_code"="已发送验证码";
+
 
 //<!--loginactivity --="
 "password_less"="密码小于6位";
@@ -91,7 +99,7 @@
 "email_error"="邮箱错误";
 "password_failed"="密码格式不对";
 "user_number"="请输入手机号";
-
+"user_number_right"="请输入正确的手机号";
 
 //<!--mainactivity--="
 "machine_no"="设备已断开,点击我进行搜索";
@@ -106,6 +114,7 @@
 "water"="水";
 "oil"="油";
 "machine_connected"="设备已连接";
+"machine_connected_failed"= "设备连接失败";
 
 
 //<!--manageactivity--="
@@ -126,4 +135,41 @@
 
 "teach_way"="使用教程";//连接失败
 "connect_failed"="连接失败";
+
+//弹框  文字
+"cancel"="取消";
+"sure" = "确认";
+"tips" = "温馨提示";
+"I_know" = "知道了";
+"clean_cache" = "成功清空缓存!";
+"click_beginBtn" = "请先点击开始按钮";
+"login_out" = "是否确定退出？";
+
+//网络
+"tipNetError"   = "您的网络好像有点问题";
+"tipNetTimeOut" = "请求超时";
+"tipLoading"    = "正在加载...";
+"tipNetBreak"   = "似乎已和网络断开了连接";
+"tipNetBreakWithServer" = "与服务器断开连接";
+"tipNetServerBreakRequest" = "服务器主动断开网络请求";
+"tipNetServerRepairing" = "攻城狮正在抢修服务器...";
+
+"completed" = "已完成";
+"token_past" = "您的身份令牌已过期，请重新登录";
+"Re_login" = "重新登录";
+
+// emptyPageType
+"emptyPageType_netError" = "网络加载失败，请点击重试";
+"emptyPageType_emptyData"= "空空如也~";
+"emptyPageType_emptyComment" = "客官快把评论放碗里吧~~";
+//foot
+"foot_bottom" = "已经到底啦～";
+//获取面膜数据
+"mask_data_fail" = "获取面膜数据失败";
+"mask_data_success" = "获取面膜数据成功";
+//意见反馈
+"suggestion_input" =  "请输入您的反馈意见";
+"suggestion_tel" =  "请输入您的联系电话";
+"suggestion_fail" = "反馈失败";
+"suggestion_success" = "反馈成功";
 

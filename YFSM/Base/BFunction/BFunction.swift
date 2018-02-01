@@ -159,7 +159,7 @@ class BFunction: NSObject {
      - parameter subTitle:       副标题
      - parameter cancelBtnTitle: 取消按钮的标题
      */
-    func showAlert(title: String?, subTitle: String?, cancelBtnTitle: String = "取消") {
+    func showAlert(title: String?, subTitle: String?, cancelBtnTitle: String = getLocalizableString(key: "cancel", common: "取消") ) {
         
         showAlert(title: title, subTitle: subTitle, cancelBtnTitle: cancelBtnTitle, ontherBtnTitle: nil, ontherBtnAction: nil)
     }
@@ -172,7 +172,7 @@ class BFunction: NSObject {
      - parameter cancelBtnTitle:  取消按钮的标题
      - parameter cancelBtnAction: 取消按钮的回调
      */
-    func showAlert(title: String?, subTitle: String?, cancelBtnTitle: String = "知道了", cancelBtnAction: (() -> Void)?) {
+    func showAlert(title: String?, subTitle: String?, cancelBtnTitle: String = getLocalizableString(key: "I_know", common: "知道了"), cancelBtnAction: (() -> Void)?) {
         
         let alert = UIAlertController(title: title, message: subTitle, preferredStyle: .alert)
         let action = UIAlertAction(title: cancelBtnTitle, style: .default, handler: { (action) in
@@ -196,7 +196,7 @@ class BFunction: NSObject {
      - parameter ontherBtnTitle:  另一个按钮的标题
      - parameter ontherBtnAction: 另一个按钮的回调
      */
-    func showAlert(title: String?, subTitle: String?, cancelBtnTitle: String = "取消", ontherBtnTitle: String?, ontherBtnAction: (() -> Void)?) {
+    func showAlert(title: String?, subTitle: String?, cancelBtnTitle: String = getLocalizableString(key: "cancel", common: "取消"), ontherBtnTitle: String?, ontherBtnAction: (() -> Void)?) {
         
         let alert = UIAlertController(title: title, message: subTitle, preferredStyle: .alert)
         
@@ -229,7 +229,7 @@ class BFunction: NSObject {
         
         let alert = UIAlertController(title: title, message: subTitle, preferredStyle: .actionSheet)
         
-        let action = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let action = UIAlertAction(title: getLocalizableString(key: "cancel", common: "取消"), style: .cancel, handler: nil)
         alert.addAction(action)
         
         for (i, title) in titles.enumerated() {

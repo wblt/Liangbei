@@ -60,7 +60,7 @@ class SettingVC: BaseVC,UIAlertViewDelegate  {
         let tag:Int = (sender.view?.tag)!;
         print(sender.view?.tag as Any)
         if tag == 101 {
-            let alrtView = UIAlertView(title: "温馨提示", message: "是否确定退出？", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
+            let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示") , message: getLocalizableString(key: "login_out", common: "是否确定退出？") , delegate: self, cancelButtonTitle: "取消", otherButtonTitles: getLocalizableString(key: "sure", common: "确定") )
             alrtView.show()
         } else if tag == 102 {
             NavigationManager.pushToNativeWebView(form: self, fileName: "operation", title: getLocalizableString(key: "more", common: "更多")  )
