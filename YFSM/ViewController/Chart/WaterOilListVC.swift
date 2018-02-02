@@ -11,15 +11,49 @@ import MJExtension
 import Alamofire
 import SVProgressHUD
 
-class WaterOilListVC: BaseVC {
+class WaterOilListVC: BaseVC , UITableViewDataSource, UITableViewDelegate{
 
+	var table:UITableView!
+	var data:[TimeDataModel] = [TimeDataModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		table = UITableView(frame: UIScreen.main.bounds)
+		//设置数据源
+		self.table.dataSource = self
+		//设置代理
+		self.table.delegate = self
+		self.view.addSubview(table)
+		//注册UITableView，cellID为重复使用cell的Identifier
+		self.table.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
+		
 		getdata()
         // Do any additional setup after loading the view.
     }
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 70
+	}
 
+	//设置cell的数量
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.data.count
+	}
+	
+	//设置section的数量
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	//设置tableview的cell
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = (table.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)) as UITableViewCell
+		let model:TimeDataModel = self.data[indexPath.row]
+		cell.textLabel?.text = model.startTime
+		
+		return cell
+	}
+	
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,7 +81,7 @@ class WaterOilListVC: BaseVC {
 					if jsonResult["result"] as! Int == 0 {
 						SVProgressHUD.showInfo(withStatus: getLocalizableString(key: "mask_data_success", common: "获取面膜数据成功") )
 						let data:Array<Dictionary> = jsonResult["data"] as! Array<Dictionary<String,Any>>;
-						var fatherArray:[TimeDataModel] = [TimeDataModel]()
+						//var fatherArray:[TimeDataModel] = [TimeDataModel]()
 						var sonArray:[FaceDataModel] = [FaceDataModel]()
 						
 						
@@ -69,13 +103,13 @@ class WaterOilListVC: BaseVC {
 							timeModel.startTime = firstModel.time
 							timeModel.endTime = lastModel.time
 							timeModel.data = sonArray
-							fatherArray.append(timeModel)
+							self.data.append(timeModel)
 							sonArray .removeAll()
 							
 						}
 						//获取到 cell数据
-						print(fatherArray)
-						
+						print(self.data)
+						self.table.reloadData()
 						
 					}else {
 						SVProgressHUD.showError(withStatus: getLocalizableString(key: "mask_data_fail", common: "获取面膜数据失败") )
