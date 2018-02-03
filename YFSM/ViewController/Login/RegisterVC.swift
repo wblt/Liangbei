@@ -32,10 +32,21 @@ class RegisterVC: BaseVC {
     
 
     @IBAction func registerAction(_ sender: UIButton) {
-        if _numberTextField.text?.length != 11 {
-            SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number", common: "请输入手机号"))
-            return
+        
+        let langStr:String = Utility.getCurrentLanguage();
+        if langStr == "en" {
+            let isEmail = Utility.lx_isMailBox(vStr: _numberTextField.text!)
+            if !isEmail {
+                SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number", common: "请输入正确的邮箱账号"))
+                return
+            }
+        } else {
+            if _numberTextField.text?.length != 11 {
+                SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number", common: "请输入手机号"))
+                return
+            }
         }
+    
         if (_passwordTextField.text?.length)! < 6 {
 			//"请设置密码(6-10位数字与字母的组合)"
             SVProgressHUD.showError(withStatus: getLocalizableString(key: "password_failed", common: "密码格式不对") )

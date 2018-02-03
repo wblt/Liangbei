@@ -16,6 +16,13 @@ class Utility {
         return preferredLang as String//若当前系统为英文，则返回en_US
     }
     
+    class func lx_isMailBox(vStr: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let emailTest = NSPredicate.init(format: "SELF MATCHES %@", emailRegex)
+        return emailTest.evaluate(with: vStr)
+        
+    }
+    
 
     //返回裁剪区域图片,返回裁剪区域大小图片
     
