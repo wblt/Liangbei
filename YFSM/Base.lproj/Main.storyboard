@@ -754,15 +754,13 @@
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Gmy-xi-OTu">
                                 <rect key="frame" x="168" y="610" width="39" height="37"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-Ns-GNX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-Ns-GNX">
                                 <rect key="frame" x="148" y="561" width="80" height="30"/>
-                                <color key="backgroundColor" red="0.23921568630000001" green="0.61960784310000006" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="afL-A9-w7x"/>
                                     <constraint firstAttribute="height" constant="30" id="pmh-oO-VSi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="开始体验">
+                                <state key="normal" title="开始体验" image="getInto">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -793,6 +791,7 @@
         <image name="background" width="375" height="667"/>
         <image name="chart_bg" width="375" height="667"/>
         <image name="connection" width="70" height="70"/>
+        <image name="getInto" width="160" height="48"/>
         <image name="jian" width="50" height="50"/>
         <image name="jian_press" width="50" height="50"/>
         <image name="logon_en" width="96" height="96"/>

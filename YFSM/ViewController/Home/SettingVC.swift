@@ -63,6 +63,7 @@ class SettingVC: BaseVC,UIAlertViewDelegate  {
             let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示") , message: getLocalizableString(key: "login_out", common: "是否确定退出？") , delegate: self, cancelButtonTitle: "取消", otherButtonTitles: getLocalizableString(key: "sure", common: "确定") )
             alrtView.show()
         } else if tag == 102 {
+            let langStr:String = Utility.getCurrentLanguage();
             if langStr == "en" {
                 NavigationManager.pushToNativeWebView(form: self, fileName: "blogenglish", title: getLocalizableString(key: "more", common: "更多")  )
             } else {

@@ -30,11 +30,11 @@ class LoginVC: BaseVC {
         _registerBtn.layer.borderColor = UIColor.cyan.cgColor
         _registerBtn.layer.borderWidth = 1.0
         _registerBtn.layer.masksToBounds = true;
-        var langStr:String = Utility.getCurrentLanguage();
+        let langStr:String = Utility.getCurrentLanguage();
         if langStr == "en" {
-            self.logoImg.image = UIImageView(image:UIImage(named:"logon_en"))
+            self.logoImg.image = UIImage(named:"logon_en")
         } else {
-            self.logoImg.image = UIImageView(image:UIImage(named:"liangbeilogo"))
+            self.logoImg.image = UIImage(named:"liangbeilogo")
         }
     }
     

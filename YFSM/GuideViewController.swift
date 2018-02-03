@@ -35,7 +35,7 @@ class GuideViewController: UIViewController {
         scrollView.delegate = self
         
         for index  in 0..<numOfPages {
-            let imageView = UIImageView(image: UIImage(named: "GuideImage\(index + 1)"))
+            let imageView = UIImageView(image: UIImage(named: "start_\(index + 1)"))
             imageView.frame = CGRect(x: frame.size.width * CGFloat(index), y: 0, width: frame.size.width, height: frame.size.height)
             scrollView.addSubview(imageView)
         }
