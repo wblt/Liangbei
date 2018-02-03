@@ -27,6 +27,7 @@ class WaterOilListVC: BaseVC , UITableViewDataSource, UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+        self.title = getLocalizableString(key: "water_and_oil_data_sheet", common: "历史记录")
 		self.edgesForExtendedLayout = []
 		
 		self.table = UITableView(frame: self.view.bounds, style:UITableViewStyle.grouped)
@@ -99,6 +100,12 @@ class WaterOilListVC: BaseVC , UITableViewDataSource, UITableViewDelegate{
 		print("起始时间：" + model.startTime)
 		print("结束时间：" + model.endTime)
 		print("数据个数：" + model.data);
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let chatVC = storyboard.instantiateViewController(withIdentifier: "GoChartSegueIdentifier") as! ChartVC
+        chatVC.type = "WateroilList"
+        chatVC.beanArrassy = model.data as! [FaceDataModel];
+        self.navigationController?.pushViewController(chatVC, animated: true)
+        
 		
 	}
 	

@@ -72,6 +72,7 @@ class SettingVC: BaseVC,UIAlertViewDelegate  {
         } else if tag == 103 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let chatVC = storyboard.instantiateViewController(withIdentifier: "GoChartSegueIdentifier") as! ChartVC
+            chatVC.type = "HomeVC"
             self.navigationController?.pushViewController(chatVC, animated: true)
         } else if tag == 104 {
             // 代理

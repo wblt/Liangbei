@@ -13,19 +13,23 @@ import SVProgressHUD
 
 class ChartVC: BaseVC {
    var isYIsPercent: Bool = false
-   // var lineChart:PNLineChart!
     var xTitles:[String] = []
     var beanArrassy:[FaceDataModel] = [FaceDataModel]()
     var chartView:ChartView!
+    var type:String = "";
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = getLocalizableString(key: "water_and_oil_data_sheet", common: "水油数据表")
         self.automaticallyAdjustsScrollViewInsets = false;
-        getdata();
-        
-        let rightBtn = UIBarButtonItem(image: UIImage(named: "admin"), style: .plain, target: self, action: #selector(self.btnClickss(_:)))
-        self.navigationItem.rightBarButtonItem = rightBtn
+        if type == "HomeVC" { // 设置界面进来
+            let rightBtn = UIBarButtonItem(image: UIImage(named: "history"), style: .plain, target: self, action: #selector(self.btnClickss(_:)))
+            self.navigationItem.rightBarButtonItem = rightBtn
+            getdata();
+        } else if type == "WateroilList" {  // 历史记录界面进来
+            self.initEView(flag: "2");
+        }
     }
     
     @objc func btnClickss(_ sender:AnyObject) {
