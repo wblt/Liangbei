@@ -374,7 +374,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="密码 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="9C0-G2-TiG">
                                 <rect key="frame" x="15" y="359" width="20" height="20"/>
@@ -508,7 +508,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registernumber" translatesAutoresizingMaskIntoConstraints="NO" id="BgK-Br-sFa">
                                 <rect key="frame" x="15" y="136" width="20" height="20"/>
@@ -613,7 +613,6 @@
                             <constraint firstAttribute="trailing" secondItem="I9g-HE-e6a" secondAttribute="trailing" constant="5" id="Bsx-v1-azF"/>
                             <constraint firstItem="tpd-Uy-wc4" firstAttribute="leading" secondItem="BgK-Br-sFa" secondAttribute="trailing" constant="10" id="CuR-jV-74t"/>
                             <constraint firstItem="Kaa-T1-TlQ" firstAttribute="leading" secondItem="L0n-sB-MWz" secondAttribute="leading" constant="10" id="CwF-Ht-6UE"/>
-                            <constraint firstItem="Ao1-Di-3fr" firstAttribute="top" secondItem="tpd-Uy-wc4" secondAttribute="bottom" constant="5" id="Dmn-xq-cKU"/>
                             <constraint firstAttribute="trailing" secondItem="HuX-XZ-Ir2" secondAttribute="trailing" constant="10" id="Fuu-9c-VKT"/>
                             <constraint firstItem="4dt-o6-q15" firstAttribute="top" secondItem="WFO-IV-yDg" secondAttribute="bottom" constant="10" id="Hxf-7j-DTJ"/>
                             <constraint firstAttribute="trailing" secondItem="Bi3-Hy-E4f" secondAttribute="trailing" constant="10" id="Kqd-Ag-HbS"/>
@@ -623,6 +622,7 @@
                             <constraint firstItem="BgK-Br-sFa" firstAttribute="leading" secondItem="L0n-sB-MWz" secondAttribute="leading" constant="15" id="UE9-qj-nen"/>
                             <constraint firstItem="0H6-g0-iSG" firstAttribute="leading" secondItem="xFn-OB-9UM" secondAttribute="trailing" constant="10" id="VVc-1q-ksz"/>
                             <constraint firstItem="Bi3-Hy-E4f" firstAttribute="leading" secondItem="L0n-sB-MWz" secondAttribute="leading" constant="10" id="WNx-EX-3f8"/>
+                            <constraint firstItem="tpd-Uy-wc4" firstAttribute="centerY" secondItem="BgK-Br-sFa" secondAttribute="centerY" id="XCk-ZL-hnY"/>
                             <constraint firstItem="4dt-o6-q15" firstAttribute="top" secondItem="I9g-HE-e6a" secondAttribute="bottom" constant="5" id="XYH-t0-vB0"/>
                             <constraint firstItem="xFn-OB-9UM" firstAttribute="top" secondItem="L0n-sB-MWz" secondAttribute="top" constant="80" id="Y64-3M-eSr"/>
                             <constraint firstItem="I9g-HE-e6a" firstAttribute="leading" secondItem="WFO-IV-yDg" secondAttribute="trailing" constant="10" id="Z9D-k5-ald"/>
@@ -636,7 +636,6 @@
                             <constraint firstItem="WFO-IV-yDg" firstAttribute="leading" secondItem="L0n-sB-MWz" secondAttribute="leading" constant="15" id="nnM-wW-9hR"/>
                             <constraint firstItem="Ao1-Di-3fr" firstAttribute="leading" secondItem="L0n-sB-MWz" secondAttribute="leading" constant="10" id="nxa-vU-aWm"/>
                             <constraint firstItem="4dt-o6-q15" firstAttribute="leading" secondItem="L0n-sB-MWz" secondAttribute="leading" constant="10" id="qxT-o0-WxC"/>
-                            <constraint firstItem="tpd-Uy-wc4" firstAttribute="top" secondItem="Kaa-T1-TlQ" secondAttribute="bottom" constant="20" id="ya3-ZY-62l"/>
                         </constraints>
                     </view>
                     <connections>
@@ -645,6 +644,9 @@
                         <outlet property="_numberTextField" destination="0H6-g0-iSG" id="Fke-RI-brJ"/>
                         <outlet property="_passwordTextField" destination="I9g-HE-e6a" id="96H-4T-NmS"/>
                         <outlet property="_registerBtn" destination="HuX-XZ-Ir2" id="de2-Zu-mXg"/>
+                        <outlet property="smsHeight" destination="6QX-yQ-tG2" id="a15-rr-ZAX"/>
+                        <outlet property="smsImg" destination="BgK-Br-sFa" id="xYj-zf-giD"/>
+                        <outlet property="smsLine" destination="Ao1-Di-3fr" id="TEY-QR-bzw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMA-eI-eRv" userLabel="First Responder" sceneMemberID="firstResponder"/>

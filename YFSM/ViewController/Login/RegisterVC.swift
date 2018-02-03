@@ -11,6 +11,9 @@ import SVProgressHUD
 import Alamofire
 class RegisterVC: BaseVC {
 
+    @IBOutlet weak var smsLine: UIImageView!
+    @IBOutlet weak var smsImg: UIImageView!
+    @IBOutlet weak var smsHeight: NSLayoutConstraint!
     @IBOutlet weak var _numberTextField: UITextField!
     @IBOutlet weak var _passwordTextField: UITextField!
     @IBOutlet weak var _codeTextField: UITextField!
@@ -22,7 +25,22 @@ class RegisterVC: BaseVC {
         super.viewDidLoad()
 
         self.title =  getLocalizableString(key: "app_regist", common: "注册")
-        // Do any additional setup after loading the view.
+        let langStr:String = Utility.getCurrentLanguage();
+        if langStr == "en" {
+            self.smsHeight.constant = -38;
+            self.smsImg.isHidden = true
+            self.smsLine.isHidden = true
+            self._codeTextField.isHidden = true
+            self._codeButton.isHidden = true
+            
+        } else {
+           
+            self.smsHeight.constant = 25;
+            self.smsImg.isHidden = false
+            self.smsLine.isHidden = false
+            self._codeTextField.isHidden = false
+            self._codeButton.isHidden = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,11 +58,19 @@ class RegisterVC: BaseVC {
                 SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number", common: "请输入正确的邮箱账号"))
                 return
             }
+            
+
         } else {
             if _numberTextField.text?.length != 11 {
                 SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number", common: "请输入手机号"))
                 return
             }
+            
+            if _codeTextField.text != self.code {
+                SVProgressHUD.showError(withStatus: getLocalizableString(key: "checkcode_error", common: "验证码错误") )
+                return
+            }
+            
         }
     
         if (_passwordTextField.text?.length)! < 6 {
@@ -52,12 +78,8 @@ class RegisterVC: BaseVC {
             SVProgressHUD.showError(withStatus: getLocalizableString(key: "password_failed", common: "密码格式不对") )
             return
         }
-        if _codeTextField.text != self.code {
-            SVProgressHUD.showError(withStatus: getLocalizableString(key: "checkcode_error", common: "验证码错误") )
-            return
-        }
-        let urlString = api_service+"/register"
         
+        let urlString = api_service+"/register"
         var parameters = [String: Any]()
         parameters["username"] = _numberTextField.text
         parameters["password"] = _passwordTextField.text?.mattress_MD5();
