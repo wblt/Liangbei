@@ -63,7 +63,11 @@ class SettingVC: BaseVC,UIAlertViewDelegate  {
             let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示") , message: getLocalizableString(key: "login_out", common: "是否确定退出？") , delegate: self, cancelButtonTitle: "取消", otherButtonTitles: getLocalizableString(key: "sure", common: "确定") )
             alrtView.show()
         } else if tag == 102 {
-            NavigationManager.pushToNativeWebView(form: self, fileName: "operation", title: getLocalizableString(key: "more", common: "更多")  )
+            if langStr == "en" {
+                NavigationManager.pushToNativeWebView(form: self, fileName: "blogenglish", title: getLocalizableString(key: "more", common: "更多")  )
+            } else {
+                NavigationManager.pushToNativeWebView(form: self, fileName: "operation", title: getLocalizableString(key: "more", common: "更多")  )
+            }
         } else if tag == 103 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let chatVC = storyboard.instantiateViewController(withIdentifier: "GoChartSegueIdentifier") as! ChartVC

@@ -11,6 +11,12 @@ import SDWebImage
 class Utility {
     
     
+    class func getCurrentLanguage() -> String{
+        let defs = NSserDefaults.standardUserDefaults()
+        let languages = defs.objectForKey("AppleLanguages")//获取系统支持的所有语言集合
+        let preferredLanguage = languages!.objectAtIndex(0)//集合第一个元素为当前语言
+        return String(prefrredLanguage)//若当前系统为英文，则返回en_US
+    }
     
 
     //返回裁剪区域图片,返回裁剪区域大小图片

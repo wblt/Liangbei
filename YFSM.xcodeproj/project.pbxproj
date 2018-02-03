@@ -122,6 +122,7 @@
 		36232197200E707800E60794 /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36232196200E707800E60794 /* ChartModel.m */; };
 		362321A52012526200E60794 /* FaceDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362321A42012526200E60794 /* FaceDataModel.m */; };
 		3623A13020178E6400FFA177 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3623A12E20178E6400FFA177 /* SettingVC.swift */; };
+		36DDDE1120257EDC005ABC08 /* blogenglish.html in Resources */ = {isa = PBXBuildFile; fileRef = 36DDDE1020257EDC005ABC08 /* blogenglish.html */; };
 		36FA6DB320185EAA00FABA2B /* MBProgressHUD+Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA6DB220185EAA00FABA2B /* MBProgressHUD+Hud.m */; };
 		503325D3B01B5D95DCC6EE55 /* Pods_YFSM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AE3DEF952D45E0B5B802BC /* Pods_YFSM.framework */; };
 		8D425BAD200C71CF0067D706 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D425BAC200C71CF0067D706 /* NetworkTools.swift */; };
@@ -293,6 +294,7 @@
 		362321A32012526200E60794 /* FaceDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDataModel.h; sourceTree = "<group>"; };
 		362321A42012526200E60794 /* FaceDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDataModel.m; sourceTree = "<group>"; };
 		3623A12E20178E6400FFA177 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		36DDDE1020257EDC005ABC08 /* blogenglish.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = blogenglish.html; sourceTree = "<group>"; };
 		36FA6DB120185EAA00FABA2B /* MBProgressHUD+Hud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Hud.h"; sourceTree = "<group>"; };
 		36FA6DB220185EAA00FABA2B /* MBProgressHUD+Hud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Hud.m"; sourceTree = "<group>"; };
 		45DB0ACA37AF3B3ADADF24B7 /* Pods-YFSM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFSM.release.xcconfig"; path = "Pods/Target Support Files/Pods-YFSM/Pods-YFSM.release.xcconfig"; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 		3623204C200AFB2400E60794 /* h5 */ = {
 			isa = PBXGroup;
 			children = (
+				36DDDE1020257EDC005ABC08 /* blogenglish.html */,
 				3623204D200AFB2400E60794 /* css */,
 				36232061200AFB2400E60794 /* fonts */,
 				36232067200AFB2400E60794 /* img */,
@@ -1016,6 +1019,7 @@
 				3623207E200AFB2400E60794 /* icons.svg in Resources */,
 				36232099200AFB2400E60794 /* operation.html in Resources */,
 				3623208D200AFB2400E60794 /* logo.svg in Resources */,
+				36DDDE1120257EDC005ABC08 /* blogenglish.html in Resources */,
 				3623208E200AFB2400E60794 /* bootstrap.min.js in Resources */,
 				3623214D200AFD7600E60794 /* m3.mp3 in Resources */,
 				36232098200AFB2400E60794 /* klass.min.js in Resources */,

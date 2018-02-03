@@ -468,6 +468,7 @@
                         <outlet property="_numberTextField" destination="lLY-RD-rRx" id="sj8-T1-v8K"/>
                         <outlet property="_passwordTextField" destination="3qo-a6-cGZ" id="trA-hf-9GI"/>
                         <outlet property="_registerBtn" destination="EwW-vo-q7s" id="uTQ-fh-GBK"/>
+                        <outlet property="logoImg" destination="L8C-3k-KCs" id="r9W-s6-r9g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcG-Qs-ZE9" userLabel="First Responder" sceneMemberID="firstResponder"/>

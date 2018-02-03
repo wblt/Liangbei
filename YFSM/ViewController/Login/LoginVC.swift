@@ -16,6 +16,7 @@ class LoginVC: BaseVC {
     @IBOutlet weak var _loginButton: UIButton!
     @IBOutlet weak var _registerBtn: UIButton!
     
+    @IBOutlet weak var logoImg: UIImageView!
     
     // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -28,8 +29,13 @@ class LoginVC: BaseVC {
         
         _registerBtn.layer.borderColor = UIColor.cyan.cgColor
         _registerBtn.layer.borderWidth = 1.0
-
         _registerBtn.layer.masksToBounds = true;
+        var langStr:String = Utility.getCurrentLanguage();
+        if langStr == "en" {
+            self.logoImg.image = UIImageView(image:UIImage(named:"logon_en"))
+        } else {
+            self.logoImg.image = UIImageView(image:UIImage(named:"liangbeilogo"))
+        }
     }
     
     override func didReceiveMemoryWarning() {
