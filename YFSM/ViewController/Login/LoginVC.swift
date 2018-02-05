@@ -50,9 +50,18 @@ class LoginVC: BaseVC {
     @IBAction func loginAction(_ sender: UIButton) {
 //        let net = NetWork.init();
 //        net.getlogin();
-        if _numberTextField.text?.length != 11 {
-            SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number_right", common: "请输入正确的手机号"))
-            return
+        let langStr:String = Utility.getCurrentLanguage();
+        if langStr == "en" {
+            let isEmail = Utility.lx_isMailBox(vStr: _numberTextField.text!)
+            if !isEmail {
+                SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number", common: "请输入正确的邮箱账号"))
+                return
+            }
+        } else {
+            if _numberTextField.text?.length != 11 {
+                SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number_right", common: "请输入正确的手机号"))
+                return
+            }
         }
         if _passwordTextField.text?.length == 0 {
             SVProgressHUD.showError(withStatus:getLocalizableString(key: "password", common: "请输入密码") )
@@ -60,7 +69,6 @@ class LoginVC: BaseVC {
         }
 //        let urlString = "http://hi-watch.com.cn/tpiot/app/login"
         let urlString = api_service+"/login"
-    
         var parameters = [String: Any]()
         parameters["username"] = _numberTextField.text
         parameters["password"] = _passwordTextField.text?.mattress_MD5();
