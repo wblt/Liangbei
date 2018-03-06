@@ -149,13 +149,13 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         self.navigationItem.rightBarButtonItem = rightBtn
         self.setBabyDelegate()
         self.startAnimation()
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try AVAudioSession.sharedInstance().setActive(true)
-            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-        } catch {
-
-        }
+//        do {
+//            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+//            try AVAudioSession.sharedInstance().setActive(true)
+//            try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//        } catch {
+//
+//        }
         let path1 = Bundle.main.path(forResource: "m1", ofType: "mp3")
         let path2 = Bundle.main.path(forResource: "m2", ofType: "mp3")
         let path3 = Bundle.main.path(forResource: "m3", ofType: "mp3")
