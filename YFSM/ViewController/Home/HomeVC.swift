@@ -1046,7 +1046,7 @@ class HomeVC: BaseVC,JHCustomMenuDelegate,SearchDeviceViewDelegate,AVAudioPlayer
         }
         if indexPath.row == 3 {
             
-            let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示") , message: getLocalizableString(key: "login_out", common: "是否确定退出？") , delegate: self, cancelButtonTitle: getLocalizableString(key: "cancel", common: "取消"), otherButtonTitles: getLocalizableString(key: "cancel", common: "确定"))
+            let alrtView = UIAlertView(title: getLocalizableString(key: "tips", common: "温馨提示") , message: getLocalizableString(key: "login_out", common: "是否确定退出？") , delegate: self, cancelButtonTitle: getLocalizableString(key: "cancel", common: "取消"), otherButtonTitles: getLocalizableString(key: "sure", common: "确定"))
             alrtView.tag = 101;
             alrtView.show()
         }
