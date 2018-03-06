@@ -20,6 +20,7 @@ class RegisterVC: BaseVC {
     @IBOutlet weak var _codeButton: UIButton!
     @IBOutlet weak var _registerBtn: UIButton!
     var code = ""
+    private var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +119,8 @@ class RegisterVC: BaseVC {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func codeAction(_ sender: UIButton) {
-        let urlString = "http://hi-watch.com.cn/tpiot/app/vercode"
+        
+        let urlString = api_service+"/vercode"
         var parameters = [String: Any]()
         parameters["username"] = _numberTextField.text
         BFunction.shared.showLoading()
@@ -132,14 +134,49 @@ class RegisterVC: BaseVC {
                 if jsonResult["result"] as! Int == 0 {
                     self.code = (jsonResult["vercode"] as! NSNumber).stringValue
                     SVProgressHUD.showSuccess(withStatus:getLocalizableString(key: "send_code", common: "已发送验证码") )
+                    self.remainingSeconds = 59
+                    self.isCounting = !self.isCounting
                 }else {
-                    
                     SVProgressHUD.showError(withStatus: getLocalizableString(key: "get_code_error", common: "获取验证码失败"))
                 }
             }
             
         }
     }
+    
+    private var isCounting: Bool = false {//是否开始计时
+        willSet(newValue) {
+            if newValue {
+                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+            } else {
+                timer?.invalidate()
+                timer = nil
+            }
+        }
+    }
+
+    
+    @objc func updateTimer(timer: Timer) {// 更新时间
+        if remainingSeconds > 0 {
+            remainingSeconds -= 1
+        }
+        
+        if remainingSeconds == 0 {
+            _codeButton.setTitle("获取验证码", for: .normal)
+            _codeButton.isEnabled = true
+            isCounting = !isCounting
+            timer.invalidate()
+        }
+    }
+    
+    private var remainingSeconds: Int = 0 {//remainingSeconds数值改变时 江将会调用willSet方法
+        willSet(newSeconds) {
+            let seconds = newSeconds%60
+            _codeButton.setTitle(NSString(format: "%02ds", seconds) as String, for: .normal)
+        }
+    }//当前倒计时剩余的秒数
+    
+    
     
     /*
     // MARK: - Navigation

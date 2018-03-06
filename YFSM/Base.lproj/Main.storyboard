@@ -590,13 +590,15 @@
                                     <action selector="backAction:" destination="AdZ-en-mXa" eventType="touchUpInside" id="zod-iR-GSe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyy-oR-B42">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyy-oR-B42">
                                 <rect key="frame" x="290" y="131.5" width="80" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="tj3-mm-k5g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="获取验证码"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="codeAction:" destination="AdZ-en-mXa" eventType="touchUpInside" id="JUp-Cw-N9q"/>
                                 </connections>

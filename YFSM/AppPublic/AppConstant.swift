@@ -19,8 +19,8 @@ let cProductionDomainUrl = "http://ncvt.yundousi.com:8080/doby"
 let cTestDomainUrl       = "http://192.168.1.20"
 
 // 服务器环境
-// let api_service = "http://120.26.104.21/tpiot/app";
-let api_service = "http://120.26.104.21/tpiot/app";
+ let api_service = "http://120.26.104.21/tpiot/app";
+//let api_service = "http://115.29.5.227:8080/tpiot/app";
 
 let cApiVersionV1 = ""
 
