@@ -48,8 +48,6 @@ class LoginVC: BaseVC {
     }
     
     @IBAction func loginAction(_ sender: UIButton) {
-//        let net = NetWork.init();
-//        net.getlogin();
         let langStr:String = Utility.getCurrentLanguage();
         if langStr == "en" {
             let isEmail = Utility.lx_isMailBox(vStr: _numberTextField.text!)
@@ -63,11 +61,14 @@ class LoginVC: BaseVC {
                 return
             }
         }
+//        if _numberTextField.text?.length == 0 {
+//            SVProgressHUD.showError(withStatus: getLocalizableString(key: "user_number_right", common: "请输入账号"))
+//            return
+//        }
         if _passwordTextField.text?.length == 0 {
             SVProgressHUD.showError(withStatus:getLocalizableString(key: "password", common: "请输入密码") )
             return
         }
-//        let urlString = "http://hi-watch.com.cn/tpiot/app/login"
         let urlString = api_service+"/login"
         var parameters = [String: Any]()
         parameters["username"] = _numberTextField.text
