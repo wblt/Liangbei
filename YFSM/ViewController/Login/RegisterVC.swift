@@ -131,8 +131,11 @@ class RegisterVC: BaseVC {
                 return
             }
             if let jsonResult = response.value as? Dictionary<String, Any> {
-                if jsonResult["result"] as! Int == 0 {
-                    self.code = (jsonResult["vercode"] as! NSNumber).stringValue
+                let ss:String = jsonResult["result"] as! String;
+                let v = Int(ss);
+                if v == 0 {
+                    print("dd");
+                    self.code = jsonResult["vercode"] as! String
                     SVProgressHUD.showSuccess(withStatus:getLocalizableString(key: "send_code", common: "已发送验证码") )
                     self.remainingSeconds = 59
                     self.isCounting = !self.isCounting
